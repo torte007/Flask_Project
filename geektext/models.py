@@ -9,7 +9,7 @@ publish = db.Table('publish',
 
 class Author(db.Model):
     name = db.Column(db.String(100), primary_key=True)
-    info = db.Column(db.Text, nullable-False)
+    info = db.Column(db.Text, nullable=False)
     books = db.relationship('Book', secondary=publish, backref=db.backref('authors'))
 
     def __repr__(self):
